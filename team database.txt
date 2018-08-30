@@ -1,0 +1,74 @@
+
+    
+ use CricBuzz  
+
+ 
+ db.Team.insertMany([{ "teamName" : "INDIA", "odiRating" : 121, "t20Rating" : 124, "testRating" : 125 },
+ { "teamName" : "SOUTH AFRICA", "odiRating" : 110, "t20Rating" : 110, "testRating" : 106},
+ { "teamName" : "AUSTRALIA", "odiRating" : 100, "t20Rating" : 122 , "testRating" : 106},
+ { "teamName" : "NEW ZEALAND", "odiRating" : 112, "t20Rating" : 116 , "testRating" : 102},
+ { "teamName" : "ENGLAND", "odiRating" : 127, "t20Rating" : 117 , "testRating" : 97},
+ { "teamName" : "SRI LANKA", "odiRating" : 80, "t20Rating" : 88 , "testRating" : 97},
+ { "teamName" : "PAKISTAN", "odiRating" : 104, "t20Rating" : 132 , "testRating" : 88},
+ { "teamName" : "WEST INDIES", "odiRating" : 69, "t20Rating" : 106 , "testRating" : 77},
+ { "teamName" : "BANGLADESH", "odiRating" : 92, "t20Rating" : 77 , "testRating" : 67},
+ { "teamName" : "ZIMBABWE", "odiRating" : 53, "t20Rating" : 56 , "testRating" : 2}]);
+        
+
+
+db.Test.insertMany([{"playerName":"Virat Kohli", "odiCategory": "Batsmen", "odiCountry":"INDIA", "odiRanking":937},
+{"playerName":"Steven Smith", "odiCategory": "Batsmen" ,"odiCountry":"AUSTRALIA", "odiRanking":929},
+{"playerName":"Kane Williamson", "odiCategory": "Batsmen" ,"odiCountry":"NEW ZEALAND", "odiRanking":847},
+{"playerName":"David Warner", "odiCategory": "Batsmen" ,"odiCountry":"AUSTRALIA", "odiRanking":818},
+{"playerName":"Joe Root", "odiCategory": "Batsmen" ,"odiCountry":"ENGLAND", "odiRanking":763},
+{"playerName":"Cheteshwar Pujar", "odiCategory": "Batsmen", "odiCountry":"INDIA", "odiRanking":733},
+{"playerName":"Dimuth Chandimal", "odiCategory": "Batsmen", "odiCountry":"SRI LANKA" ,"odiRanking":724},
+{"playerName":"Dean Elgar", "odiCategory": "Batsmen" ,"odiCountry":"SRI LANKA", "odiRanking":703},
+{"playerName":"Aiden Markarm", "odiCategory": "Batsmen" ,"odiCountry":"SOUTH AFRICA", "odiRanking":697},
+{"playerName":"Jonny Bairstow", "odiCategory": "Batsmen" ,"odiCountry":"SOUTH AFRICA", "odiRanking":697},
+{"playerName":"James Anderson", "odiCategory": "Bowler" , "odiCountry":"ENGLAND", "odiRanking":899},
+{"playerName":"Kajiso Rabada", "odiCategory":  "Bowler","odiCountry":"SOUTH AFRICA", "odiRanking":882},
+{"playerName":"Ravindra Jadeja", "odiCategory":  "Bowler","odiCountry":"INDIA", "odiRanking":840},
+{"playerName":"Vernon Philander", "odiCategory":  "Bowler","odiCountry":"SOUTH AFRICA", "odiRanking":826},
+{"playerName":"Pat Cummins", "odiCategory":  "Bowler","odiCountry":"AUSTRALIA", "odiRanking":800},
+{"playerName":"Trent Boult", "odiCategory":  "Bowler","odiCountry":"NEW ZEALAND", "odiRanking":795},
+{"playerName":"Ravichandran Ashwin", "odiCategory":  "Bowler","odiCountry":"INDIA", "odiRanking":792},
+{"playerName":"Rangana Herath", "odiCategory":  "Bowler","odiCountry":"SRI LANKA", "odiRanking":791},
+{"playerName":"Neil Wagner", "odiCategory":  "Bowler","odiCountry":"AUSTRALIA", "odiRanking":765},
+{"playerName":"Josh Hazlewood", "odiCategory":  "Bowler","odiCountry":"NEW ZEALAND", "odiRanking":759},
+{"playerName":"Shakib Al Hasan", "odiCategory":  "All-Rounder",  "odiCountry":"BANGLADESH",    "odiRanking":420},
+{"playerName":"Ravindra Jadeja", "odiCategory":  "All-Rounder", "odiCountry":"INDIA"  ,       "odiRanking":370},
+{"playerName":"Vernon Philander", "odiCategory":  "All-Rounder", "odiCountry":"SOUTH AFRICA",  "odiRanking":370},
+{"playerName":"Ravichandran Ashwin", "odiCategory":  "All-Rounder", "odiCountry":"INDIA",         "odiRanking":367},
+{"playerName":"Jason Holder", "odiCategory":  "All-Rounder", "odiCountry":"WINDIES",       "odiRanking":354},
+{"playerName":"Ben Stokes", "odiCategory":  "All-Rounder", "odiCountry":"ENGLAND",       "odiRanking":333},
+{"playerName":"Chris Woakes", "odiCategory":  "All-Rounder", "odiCountry":"ENGLAND",       "odiRanking":263},
+{"playerName":"Moeen Ali", "odiCategory":  "All-Rounder","odiCountry":"ENGLAND",       "odiRanking":248},
+{"playerName":"Pat Cummins", "odiCategory":  "All-Rounder","odiCountry":"AUSTRALIA",     "odiRanking":248},
+{"playerName":"Mitchell Strac", "odiCategory":  "All-Rounder","odiCountry":"AUSTRALIA",     "odiRanking":247}]);
+
+
+
+
+
+
+db.InterNational.insert({"interNational":["INDIA","SOUTH AFRICA","AUSTRALIA","NEW ZEALAND","ENGLAND","IRELAND","KINYA","UGANDA","SRI LANKA" ,"PAKISTAN","WEST INDIES","BANGLADESH","ZIMBABWE"]});
+
+db.League.insert({"league":["cHENNAI SUPER KINGS","LIONS","DELHI DAREDEVILS","ROYAL CHALLENGERS","SUN-RISERS","RAJASTHAN ROYALS","MUMBAI INDIANS","KOLKATA KNIGHT RIDERS"]});
+
+db.Women.insert({"women":["INDIA WOMEN","ENGLAND WOMEN","NETHERLANDS WOMEN","AUSTRALIA WOMEN","SRI LANKA WOMEN","SOUTH AFRICA WOMEN","NEW ZEALAND WOMEN","THAILAND WOMEN","PAKISTAN WOMEN","NEPAL WOMEN"]});
+
+
+
+
+
+
+db.Matches.insertMany([{"seriesName":"India tour of England,2018","Teams":"England,India","Matches":["3 ODIs,5 Tests,3 T20s"],"Date":"Jul 02 - Sep 12"},
+		       {"seriesName":"Asia Cup 2018","Teams":"India,Sri Lanka,Pakistan,Bangladesh","Matches":"13 ODIs","Date":"Sep 14 - Sep 29"},
+                       {"seriesName":"Afghanistan tour of Ireland","Teams":"Afghanistan,Ireland","Matches":["3 ODIs,3 T20s"],"Date":"Aug 19 - Sep 01"},
+		       {"seriesName":"T20 Blast, 2018","Teams":"Nottinghamshire,Surrey", "Matches":"133 T20","Date":"Jul 03 - Sep 16"}]);
+
+
+
+
+
