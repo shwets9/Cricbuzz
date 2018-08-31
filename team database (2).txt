@@ -124,10 +124,10 @@ db.Women.insert({"women":["INDIA WOMEN","ENGLAND WOMEN","NETHERLANDS WOMEN","AUS
 
 
 
-db.Matches.insertMany([{"seriesName":"India tour of England,2018","Teams":"England,India","Matches":["3 ODIs,5 Tests,3 T20s"],"Date":"Jul 02 - Sep 12"},
-		       {"seriesName":"Asia Cup 2018","Teams":"India,Sri Lanka,Pakistan,Bangladesh","Matches":"13 ODIs","Date":"Sep 14 - Sep 29"},
-                       {"seriesName":"Afghanistan tour of Ireland","Teams":"Afghanistan,Ireland","Matches":["3 ODIs,3 T20s"],"Date":"Aug 19 - Sep 01"},
-		       {"seriesName":"T20 Blast, 2018","Teams":"Nottinghamshire,Surrey", "Matches":"133 T20","Date":"Jul 03 - Sep 16"}]);
+db.Series.insertMany([{"seriesName":"India tour of England,2018","teamsPlaying":"England,India","seriesMatches":["3 ODIs,5 Tests,3 T20s"],"seriesDate":"Jul 02 - Sep 12"},
+{"seriesName":"Asia Cup 2018","teamsPlaying":"India,Sri Lanka,Pakistan,Bangladesh","seriesMatches":"13 ODIs","seriesDate":"Sep 14 - Sep 29"},
+{"seriesName":"Afghanistan tour of Ireland","teamsPlaying":"Afghanistan,Ireland","seriesMatches":["3 ODIs,3 T20s"],"seriesDate":"Aug 19 - Sep 01"},
+{"seriesName":"T20 Blast, 2018","teamsPlaying":"Nottinghamshire,Surrey", "seriesMatches":"133 T20","seriesDate":"Jul 03 - Sep 16"}]);
 
 
 
