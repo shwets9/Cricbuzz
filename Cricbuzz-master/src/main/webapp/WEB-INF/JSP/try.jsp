@@ -139,15 +139,17 @@ window.onclick = function(e) {
 </div>
 <div class="navbar ">
    <a href="/">Home</a>
-  <a href="#news">Series</a>
-  <a href="rank">Ranking</a>
+  <a href="getSeries">Series</a>
+  
+  <a href="dontUSE">Ranking</a>
+  
   <div class="dropdown">
     <button class="dropbtn" onclick="myFunction()">Teams
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" id="myDropdown">
-      <a href="#">International</a>
-      <a href="#">League</a>
+      <a href="International">International</a>
+      <a href="League">League</a>
       <a href="women">Women</a>
     </div>
   </div> 

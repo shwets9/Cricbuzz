@@ -4,14 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
+import com.java.cricbuzz.model.Series;
 import com.java.cricbuzz.model.Team;
+import com.java.cricbuzz.service.SeriesService;
 import com.java.cricbuzz.service.TeamService;
 
 @RestController
@@ -20,6 +19,8 @@ public class TeamController {
 	@Autowired
 	private TeamService teamService;
 	
+	@Autowired
+	private SeriesService seriesService;
 	
 	@RequestMapping("/createTeam")
 	public String create(@RequestParam String teamName,@RequestParam int odiRating ,@RequestParam int t20Rating,@RequestParam int testRating)
@@ -36,6 +37,16 @@ public class TeamController {
 		return mav;
 	}
 	
+	
+	@RequestMapping("/dontUSE")
+	public ModelAndView dontUSE(){
+		
+		ModelAndView mav=new ModelAndView();
+		mav.setViewName("dontUSE");
+		return mav;
+	}
+	
+	
 	@RequestMapping("/rank")
 	public ModelAndView rank(){
 		
@@ -51,6 +62,20 @@ public class TeamController {
 		mav.setViewName("women");
 		return mav;
 	}
+	@RequestMapping("/League")
+	public ModelAndView League(){
+		
+		ModelAndView mav=new ModelAndView();
+		mav.setViewName("League");
+		return mav;
+	}
+	@RequestMapping("/International")
+	public ModelAndView International(){
+		
+		ModelAndView mav=new ModelAndView();
+		mav.setViewName("International");
+		return mav;
+	}
 	
 	@RequestMapping("/getAllTeam")
 	public ModelAndView getAll(Model model){
@@ -61,7 +86,17 @@ public class TeamController {
 		mav.addObject("teamList", teamList);
 		mav.setViewName("Teamjsp");
 		return mav;
+	}
 	
+	@RequestMapping("/getSeries")
+	public ModelAndView getSeries()
+	{
+		ModelAndView mav= new ModelAndView();
+		List<Series> seriesList= seriesService.getAllSeries();
+		mav.addObject("seriesList", seriesList);
+		mav.setViewName("Series");
+		return mav;
+		
 	}
 	/*@RequestMapping("/")
 	@ResponseBody
