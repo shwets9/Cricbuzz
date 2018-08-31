@@ -3,7 +3,7 @@
  use CricBuzz  
 
  
- db.Team.insertMany([{ "teamName" : "INDIA", "odiRating" : 121, "t20Rating" : 124, "testRating" : 125 },
+ db.team.insertMany([{ "teamName" : "INDIA", "odiRating" : 121, "t20Rating" : 124, "testRating" : 125 },
  { "teamName" : "SOUTH AFRICA", "odiRating" : 110, "t20Rating" : 110, "testRating" : 106},
  { "teamName" : "AUSTRALIA", "odiRating" : 100, "t20Rating" : 122 , "testRating" : 106},
  { "teamName" : "NEW ZEALAND", "odiRating" : 112, "t20Rating" : 116 , "testRating" : 102},
@@ -16,7 +16,7 @@
         
 
 
-db.Test.insertMany([{"playerName":"Virat Kohli", "odiCategory": "Batsmen", "odiCountry":"INDIA", "odiRanking":937},
+db.test.insertMany([{"playerName":"Virat Kohli", "odiCategory": "Batsmen", "odiCountry":"INDIA", "odiRanking":937},
 {"playerName":"Steven Smith", "odiCategory": "Batsmen" ,"odiCountry":"AUSTRALIA", "odiRanking":929},
 {"playerName":"Kane Williamson", "odiCategory": "Batsmen" ,"odiCountry":"NEW ZEALAND", "odiRanking":847},
 {"playerName":"David Warner", "odiCategory": "Batsmen" ,"odiCountry":"AUSTRALIA", "odiRanking":818},
@@ -63,7 +63,7 @@ db.Women.insert({"women":["INDIA WOMEN","ENGLAND WOMEN","NETHERLANDS WOMEN","AUS
 
 
 
-db.Matches.insertMany([{"seriesName":"India tour of England,2018","Teams":"England,India","Matches":["3 ODIs,5 Tests,3 T20s"],"Date":"Jul 02 - Sep 12"},
+db.series.insertMany([{"seriesName":"India tour of England,2018","Teams":"England,India","Matches":["3 ODIs,5 Tests,3 T20s"],"Date":"Jul 02 - Sep 12"},
 		       {"seriesName":"Asia Cup 2018","Teams":"India,Sri Lanka,Pakistan,Bangladesh","Matches":"13 ODIs","Date":"Sep 14 - Sep 29"},
                        {"seriesName":"Afghanistan tour of Ireland","Teams":"Afghanistan,Ireland","Matches":["3 ODIs,3 T20s"],"Date":"Aug 19 - Sep 01"},
 		       {"seriesName":"T20 Blast, 2018","Teams":"Nottinghamshire,Surrey", "Matches":"133 T20","Date":"Jul 03 - Sep 16"}]);
