@@ -5,12 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.java.cricbuzz.model.Team;
+import com.java.cricbuzz.model.Test;
 import com.java.cricbuzz.repository.TeamRepository;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 
 @Service
 public class TeamService {
 	@Autowired
 	private TeamRepository teamRepository;
+	@Autowired
+	private MongoTemplate mongoTemplate;
 	
 	
 	//Create operation
@@ -28,4 +34,17 @@ public class TeamService {
 	{
 		return teamRepository.findByTeamName(teamName);
 	}
+	
+	
+	
+	public  List<Team> getOdiTeam(String teamName)
+	{
+		Query query = new Query();
+		query.addCriteria(Criteria.where("teamName").is(teamName));
+		List<Team> teamNameList = mongoTemplate.find(query,Team.class);
+		return teamNameList;
+	}
+	
+	
+	
 }

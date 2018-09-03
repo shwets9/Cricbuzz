@@ -141,7 +141,7 @@ window.onclick = function(e) {
    <a href="/">Home</a>
   <a href="getSeries">Series</a>
   
-  <a href="dontUSE">Ranking</a>
+  <a href="Ranking_next">Ranking</a>
   
   <div class="dropdown">
     <button class="dropbtn" onclick="myFunction()">Teams
@@ -157,8 +157,8 @@ window.onclick = function(e) {
 
 <div style="overflow:auto">
   <div class="menu">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
+    <a href="test_table">Link 1</a>
+    <a href="DropTest">Link 2</a>
     <a href="#">Link 3</a>
     <a href="#">Link 4</a>
   </div>

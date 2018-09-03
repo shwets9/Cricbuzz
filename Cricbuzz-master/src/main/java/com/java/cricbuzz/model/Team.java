@@ -3,7 +3,7 @@ package com.java.cricbuzz.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="team")
+@Document(collection="Team")
 public class Team {
 	
 	@Id

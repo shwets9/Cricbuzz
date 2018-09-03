@@ -4,47 +4,33 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@page import="com.mongodb.*" %>
 <%@page import="java.util.*" %> 
-
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
 <table class="table table-striped table-bordered text-left">
   <thead>
   <tr>
-        <th colspan="5" style="background-color:#7c2f97;">Series records</th>
+        <th colspan="5" style="background-color:#7c2f97;"> records</th>
     </tr>
       <tr style="background-color:#f0a64e;">
-          <th class="border">SeriesName</th>
-          <th class="border">Teamplaying</th>
-          <th class="border">SeriesMatches</th>
-          <th class="border">SeriesDate</th>
+          <th class="border">Player Name</th>
+          <th class="border">Country</th>
+          <th class="border">Rating</th>
        </tr>
   </thead>                    
 
 
-  <tbody>  <c:forEach var="s" items="${seriesList}">                     
+  <tbody>  <c:forEach var="odiBatsman" items="${odiBatsmenList}">                     
           <tr>
-              <td>${s.getSeriesName()}</td>
-             <td>${s.getTeamsPlaying()}</td>
-              <td>${s.getSeriesMatches()}</td>
-              <td>${s.getSeriesDate()}</td>
+              <td>${odiBatsman.getPlayerName()}</td>
+              <td>${odiBatsman.getOdiCountry()}</td>
+              <td>${odiBatsman.getOdiRating()}</td>
           </tr>
       </c:forEach>         
-   </tbody>    
-   
-      
-                      
-  
- 
-
+   </tbody>
 </table>
-
-
-
-
-
 </body>
 </html>

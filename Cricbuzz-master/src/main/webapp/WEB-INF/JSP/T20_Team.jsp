@@ -12,11 +12,14 @@
 <body>
 <table class="table table-striped table-bordered text-left">
   <thead>
+  <tr>
+        <th colspan="5" style="background-color:#7c2f97;"> Records</th>
+    </tr>
       <tr style="background-color:#f0a64e;">
-          <th>TeamName</th>
-          <th>OdI</th>
-          <th>T20</th>
-          <th>Test</th>
+          <th class="border">TEAM NAME</th>
+          <th class="border">T20 RATING</th>
+          <!-- <th>T20</th>
+          <th>Test</th> -->
        </tr>
   </thead>                    
 
@@ -42,14 +45,13 @@
     </c:forEach> --%>
   
   
-      <c:forEach var="team" items="${teamList}">                     
+     <c:forEach var="team" items="${teamList}">                     
           <tr>
               <td>${team.getTeamName()}</td>
-             <td>${team.odiRating}</td>
-              <td>${team.t20Rating}</td>
-              <td>${team.testRating}</td>
+            
+              <td>${team.getT20Rating()}</td>
           </tr>
-      </c:forEach>        
+      </c:forEach>         
    </tbody>    
       
                       
