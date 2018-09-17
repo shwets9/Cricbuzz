@@ -1,0 +1,21 @@
+docker tag bb38976d03cf yourhubusername/verse_gapminder:firsttry
+
+docker push yourhubusername/verse_gapminder
+
+======================================================================
+
+Tag your image using docker tag.
+
+In the example below replace my_image with your image’s name, and DOCKER_ID_USER with your Docker Cloud username if needed.
+
+ $ docker tag my_image $DOCKER_ID_USER/my_image
+Push your image to Docker Hub using docker push (making the same replacements as in the previous step).
+
+ $ docker push $DOCKER_ID_USER/my_image
+ 
+ ====================================
+ 
+ docker login
+You will be prompted for your Docker login credentials. Upon successful authentication, you will see Login Succeeded. Finally, you can push your image to Docker Hub with the command:
+
+docker push USER/test-lamp-server
